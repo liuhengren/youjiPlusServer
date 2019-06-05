@@ -24,13 +24,15 @@ import com.bean.User;
 import com.dao.DynamicDao;
 import com.daoimpl.BaseDao;
 import com.google.gson.Gson;
+import com.service.CommnetService;
+import com.service.DyLikeService;
 import com.service.FunService;
 import com.service.UserService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 public class AtTest {
 	@Autowired
-	DynamicDao test;
+	CommnetService test;
 	@Autowired
 	UserService userService;
 	@Test
@@ -78,8 +80,13 @@ public class AtTest {
 //		Gson gson =new Gson();
 //		String json = gson.toJson(dynamic);
 //		System.out.println(json);
-		int i = test.queryDynamicCount(5);
-		System.out.println(i);
+//		int i = test.queryDynamicCount(5);
+//		System.out.println(i);
+//		int i = test.deleteDyLike(2, 6);
+//		System.out.println(i);
+//		test.likeDy(2, 6);
+		List<Commnet> list = test.queryWhoComMyDy(2);
+		System.out.println(list.size());
 		
 	}
 

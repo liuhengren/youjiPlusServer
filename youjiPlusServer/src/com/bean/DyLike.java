@@ -45,6 +45,10 @@ public class DyLike {
 	public DyLike() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "DyLike [id=" + id + ", user=" + user + ", dynamic=" + dynamic + "]";
+	}
 	
 	
 }

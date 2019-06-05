@@ -5,8 +5,9 @@ import java.util.List;
 import com.bean.DyLike;
 
 public interface DyLikeDao {
-	int isLike(DyLike dyLike);
+	int isLike(int dynamicId,int userId);
 	int likeDy(DyLike dyLike);
-	int deleteDyLike(DyLike dyLike);
+	int deleteDyLike(int dynamicId,int userId);
 	//List<DyLike> queryDyLike(int dynamicId);
+	
 }

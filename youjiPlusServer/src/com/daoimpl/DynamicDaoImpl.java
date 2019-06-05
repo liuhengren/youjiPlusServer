@@ -2,6 +2,8 @@ package com.daoimpl;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import com.bean.Dynamic;
@@ -20,7 +22,12 @@ public class DynamicDaoImpl extends BaseDao implements DynamicDao{
 	@Override
 	public int addDynamic(Dynamic dynamic) {
 		// TODO Auto-generated method stub
-		getSession().save(dynamic);
+		Session session = getSession();
+		Transaction transaction = session.getTransaction();
+		transaction.begin();
+		session.save(dynamic);
+		transaction.commit();
+		session.close();
 		return dynamic.getId();
 	}
 

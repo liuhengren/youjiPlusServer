@@ -1,12 +1,10 @@
 package com.dao;
 
-import java.util.List;
-
 import com.bean.ComLike;
 
 public interface ComLikeDao {
-	int isLikeCom(ComLike comLike);
+	int isLikeCom(int commentId,int userId);
 	int addLikeCom(ComLike comLike);
-	int deleteLikeCom(ComLike comLike);
+	int deleteLikeCom(int commentId,int userId);
 	//List<ComLike> queryWhoLikeMyCom(int commentId);
 }
