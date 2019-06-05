@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 import com.service.CommnetService;
 
 @Controller
-@RequestMapping("/comment")
+@RequestMapping(value="/comment",produces = "text/html;charset=UTF-8")
 public class CommnetController {
 	@Autowired
 	private CommnetService commnetService;

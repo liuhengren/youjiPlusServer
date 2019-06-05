@@ -13,7 +13,7 @@ import com.bean.User;
 import com.service.FunService;
 
 @Controller
-@RequestMapping("/fun")
+@RequestMapping(value="/fun",produces = "text/html;charset=UTF-8")
 public class FunController {
 	@Autowired
 	private FunService funService;

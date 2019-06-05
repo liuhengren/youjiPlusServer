@@ -39,7 +39,7 @@ public class Dynamic {
 	private Timestamp time;
 	
 	@OneToMany(mappedBy="dynamic",cascade=CascadeType.ALL,targetEntity=Commnet.class)
-	transient private Set<Commnet> commnets =new HashSet<>();
+	private Set<Commnet> commnets =new HashSet<>();
 	
 	public Dynamic() {
 		super();

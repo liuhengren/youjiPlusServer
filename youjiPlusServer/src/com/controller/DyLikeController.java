@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.service.DyLikeService;
 
 @Controller
-@RequestMapping("/dylike")
+@RequestMapping(value="/dylike",produces = "text/html;charset=UTF-8")
 public class DyLikeController {
 	@Autowired
 	private DyLikeService dyLikeService;

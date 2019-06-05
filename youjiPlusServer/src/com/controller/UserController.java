@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping(value="/user",produces = "text/html;charset=UTF-8")
 public class UserController {
 	@Autowired
 	UserService userService;
@@ -34,6 +34,7 @@ public class UserController {
 		int i = userService.addUser(user);
 		Gson gson = new Gson();
 		String json = gson.toJson(user);
+		user.setPassword("");
 		if(i==0) {
 			return null;
 		}else {
@@ -80,5 +81,14 @@ public class UserController {
 		Map<String, Object> map = new HashMap();
 		
 		return null;
+	}
+	
+	@ResponseBody
+	@RequestMapping("/byid")
+	public String queryUserByid(int userId) {
+		User user = userService.queryUserById(userId);
+		Gson gson = new Gson();
+		String json = gson.toJson(user);
+		return json;
 	}
 }

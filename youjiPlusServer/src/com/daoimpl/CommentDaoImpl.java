@@ -33,4 +33,10 @@ public class CommentDaoImpl extends BaseDao implements CommentDao{
 		return list.size();
 	}
 
+	@Override
+	public Commnet queryById(int commentId) {
+		// TODO Auto-generated method stub
+		return (Commnet) getSession().get(Commnet.class, commentId);
+	}
+
 }

@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 import com.service.DynamciService;
 
 @Controller
-@RequestMapping("/dynamic")
+@RequestMapping(value="/dynamic",produces = "text/html;charset=UTF-8")
 public class DynamicController {
 @Autowired
 private DynamciService dynamciService;

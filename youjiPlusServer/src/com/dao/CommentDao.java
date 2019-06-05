@@ -8,4 +8,5 @@ public interface CommentDao {
 	int addCommnet(Commnet commnet);
 	List<Commnet> queryWhoComMyDy(int dynamicId);
 	int getCommnetCount(int dynamicId);
+	Commnet queryById(int commentId);
 }

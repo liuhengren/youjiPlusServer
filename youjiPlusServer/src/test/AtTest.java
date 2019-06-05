@@ -85,8 +85,8 @@ public class AtTest {
 //		int i = test.deleteDyLike(2, 6);
 //		System.out.println(i);
 //		test.likeDy(2, 6);
-		List<Commnet> list = test.queryWhoComMyDy(2);
-		System.out.println(list.size());
+//		List<Commnet> list = test.queryWhoComMyDy(2);
+//		System.out.println(list.size());
 		
 	}
 

@@ -23,7 +23,7 @@ public class User {
 	@Column(name="phones")
 	private String phone;
 	
-	transient private String password;
+	private String password;
 	
 	@Column(name="nickname")
 	private String nickName;

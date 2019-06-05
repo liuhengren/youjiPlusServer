@@ -5,11 +5,12 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
 import com.bean.ComLike;
 import com.bean.DyLike;
 import com.dao.ComLikeDao;
-
+@Repository
 public class ComLikeDaoImpl extends BaseDao implements ComLikeDao{
 
 	@Override
